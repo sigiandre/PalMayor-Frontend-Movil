@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetalleOfertaEnfermeroFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDOE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivAbueloDOE"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNombreAbueloDOE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivAbueloDOE"
+                tools:text="Nombre Abuelo" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreAbueloDOE">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clindetalleoferta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tvEdadLabelDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/edad_doe"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tvInicioDOE"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvEdadAbueloDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/tvEdadLabelDOE"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Edad" />
+
+                    <TextView
+                        android:id="@+id/tvInicioDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/dia_inicio_doe"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tvFinDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEdadLabelDOE" />
+
+                    <TextView
+                        android:id="@+id/tvFechaInicioDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/tvInicioDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEdadAbueloDOE"
+                        tools:text="Fecha Inicio" />
+
+                    <TextView
+                        android:id="@+id/tvFinDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/dia_fin_doe"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tvHorarioDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvInicioDOE" />
+
+                    <TextView
+                        android:id="@+id/tvFechaFinDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/tvFinDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioDOE"
+                        tools:text="Fecha Fin" />
+
+                    <TextView
+                        android:id="@+id/tvHorarioDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/horario_doe"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tvDirDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFinDOE" />
+
+                    <TextView
+                        android:id="@+id/tvRangoHorasDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toEndOf="@+id/tvHorarioDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFechaFinDOE"
+                        tools:text="Rango Horas" />
+
+                    <TextView
+                        android:id="@+id/tvDirDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/direccion_doe"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/tvDescDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvHorarioDOE" />
+
+                    <TextView
+                        android:id="@+id/tvDireccionDOE"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvDirDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRangoHorasDOE"
+                        tools:text="Direccion " />
+
+                    <TextView
+                        android:id="@+id/tvDescDOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/descripcion_doe"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDirDOE" />
+
+                    <TextView
+                        android:id="@+id/tvDescripcionDOE"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvDescDOE"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDireccionDOE"
+                        tools:text="Descripcion" />
+
+                    <Button
+                        android:id="@+id/btnPostular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="@color/colorSecondary"
+
+                        android:text="@string/btn_postular_doe"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDescripcionDOE" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,2 @@
+rootProject.name='Pal Mayor'
+include ':app'

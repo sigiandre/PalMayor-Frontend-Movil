@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingStart="@dimen/doublDefaultPadding"
+    android:paddingEnd="@dimen/doublDefaultPadding"
+    tools:context=".activities.SignUpActivity">
+
+    <TextView
+        android:id="@+id/lblSignUpMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Necesitamos algunos datos para comenzar"
+        android:textAlignment="center"
+        android:textSize="@dimen/importantText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpNames"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Nombres"
+        app:layout_constraintTop_toBottomOf="@id/lblSignUpMessage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpLastNames"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:hint="Apellidos"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpNames">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpLastNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpBirthDay"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+
+        android:hint="Fecha de nacimiento"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpLastNames">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpDNI"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:hint="DNI"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpBirthDay">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGrpSignUpGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpDNI">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioSignUpMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioSignUpFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:hint="Correo"
+        app:layout_constraintTop_toBottomOf="@id/radioGrpSignUpGender">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtSignUpPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultPadding"
+        android:hint="Contraseña"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpCorreo"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/doublDefaultPadding"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@id/txtSignUpPassword" />
+</androidx.constraintlayout.widget.ConstraintLayout>

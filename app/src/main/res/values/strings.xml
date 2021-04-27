@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Pal Mayor</string>
+    <string name="loremIpsumShort">Te damos la bienvenida a Vida Plena, la aplicación donde podrás publicar ofertas de cuidado para tu ancianito querido!! o postular a ofertas de cuidado para brindar tus servicios a esas abuelitos amables que tanto lo necesitan!!</string>
+
+    <string name="dia_inicio">Dia Inicio:</string>
+    <string name="dia_fin">Dia Fin:</string>
+    <string name="direccion">Dirección:</string>
+    <string name="abuelo">Abuelo:</string>
+    <string name="enfermero">Enfermero:</string>
+    <string name="enfermero_cargo">Enfermero a cargo</string>
+    <string name="horas_dia">Horario:</string>
+    <string name="abuelo_dni">DNI:</string>
+    <string name="fecha_nacimientoAbuelo">Fecha de Nacimiento:</string>
+    <string name="teNombresAbuelo">Nombres</string>
+    <string name="tvDatos">Datos del Adulto Mayor</string>
+    <string name="edad_doe">Edad:</string>
+    <string name="dia_inicio_doe">Dia Inicio:</string>
+    <string name="dia_fin_doe">Dia Fin:</string>
+    <string name="horario_doe">Horario:</string>
+    <string name="direccion_doe">Dirección</string>
+    <string name="descripcion_doe">Descripción:</string>
+    <string name="contacto_doe">Teléfono de Contacto:</string>
+    <string name="btn_postular_doe">Postular</string>
+    <string name="estudios_hint">Universidad / Instituto de egreso</string>
+    <string name="colegiatura_hint">Colegiatura</string>
+    <string name="especialidad_hint">Especialidad</string>
+    <string name="grado_hint">Grado</string>
+    <string name="experiencia_hint">Experiencia como enfermero</string>
+    <string name="actividades_basica">Actividades de la Vida Cotidiana</string>
+    <string name="abvc_necesario">Seleccione los necesarios</string>
+    <string name="abvc_grupo1">Medicamentos y Dispositivos Especiales</string>
+    <string name="abvc_grupo2">Cuidados Personales</string>
+    <string name="tv_oferta_adultomayor">Adulto Mayor</string>
+    <string name="tv_oferta_horarioatencion">Horario y Lugar de Atención</string>
+    <string name="tv_oferta_diasatencion">Dias de Atención</string>
+    <string name="tv_oferta_rhorasatencion">Horas de Atención</string>
+    <string name="tv_oferta_extras">Descripción del Paciente</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prototype_contacto_postulante">Contacto:</string>
+    <string name="centro_dep">Centro de Estudios:</string>
+    <string name="grado_dep">Grado Académico:</string>
+    <string name="especialidad_dep">"Especialidad: "</string>
+    <string name="experiencia_dep">"Experiencia: "</string>
+    <string name="contacto_dep">"Contacto: "</string>
+    <string name="btn_contratar_dep">Contratar</string>
+    <string name="edad_abuelo_listaprototipo">"Edad "</string>
+</resources>

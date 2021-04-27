@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultPadding">16dp</dimen>
+    <dimen name="doublDefaultPadding">32dp</dimen>
+
+    <dimen name="headerTitle">28sp</dimen>
+    <dimen name="pageTitle">20sp</dimen>
+    <dimen name="paragraphText">14sp</dimen>
+    <dimen name="listTitle">14sp</dimen>
+    <dimen name="importantText">16sp</dimen>
+    <dimen name="secondaryText">14sp</dimen>
+    <dimen name="buttonText">14sp</dimen>
+    <dimen name="textInput">16sp</dimen>
+</resources>

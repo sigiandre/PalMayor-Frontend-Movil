@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetalleServicioFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDetalleServicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivDetalleAbuelo"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tvDetalleNombreAbuelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivDetalleAbuelo"
+                tools:text="Nombre Abuelo" />
+
+            <ImageView
+                android:id="@+id/ivDetalleEnfermero"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleNombreAbuelo"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tvEnfermeroACargo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/enfermero_cargo"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/ivDetalleEnfermero"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleNombreAbuelo" />
+
+            <TextView
+                android:id="@+id/tvDetalleNombreEnfermero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivDetalleEnfermero"
+                app:layout_constraintTop_toBottomOf="@+id/tvEnfermeroACargo"
+                tools:text="Nombre Enfermero" />
+
+            <TextView
+                android:id="@+id/tvDetalleEspecialidad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivDetalleEnfermero"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleNombreEnfermero"
+                tools:text="Especialidad" />
+
+            <TextView
+                android:id="@+id/tvDetalleInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/dia_inicio"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivDetalleEnfermero" />
+
+            <TextView
+                android:id="@+id/tvDetalleFechaInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toEndOf="@+id/tvDetalleInicio"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleEspecialidad"
+                tools:text="Fecha Inicio" />
+
+            <TextView
+                android:id="@+id/tvDetalleFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/dia_fin"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvDetalleInicio"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleInicio" />
+
+            <TextView
+                android:id="@+id/tvDetalleFechaFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tvDetalleFin"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleFechaInicio"
+                tools:text="Fecha Fin" />
+
+            <TextView
+                android:id="@+id/tvDetalleHoraAlDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/horas_dia"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvDetalleFin"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleFin" />
+
+            <TextView
+                android:id="@+id/tvDetalleHoras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tvDetalleHoraAlDia"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleFechaFin"
+                tools:text="Horas" />
+
+            <TextView
+                android:id="@+id/tvDetalleLugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/direccion"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvDetalleHoraAlDia"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleHoraAlDia" />
+
+            <TextView
+                android:id="@+id/tvDetalleDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tvDetalleLugar"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalleHoras"
+                tools:text="@string/direccion" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
